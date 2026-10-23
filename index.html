@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>911 porsche — Гильдия Free Fire</title>
+<style>
+:root{color-scheme:dark;--bg:#07050e;--card:#130d1d;--card2:#1b1228;--line:#2d2140;--tx:#f3eefb;--mut:#9a8fb0;--or:#ffb11f;--pk:#ff3d9a;--pu:#8b4dff;--gr:#2ee59d;--bl:#3db4ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.5;min-height:100vh;overflow-x:hidden}
+#fx{position:fixed;inset:0;z-index:0;pointer-events:none}
+.glow{position:fixed;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(139,77,255,.22),transparent 65%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);left:50%;top:30%}
+.z{position:relative;z-index:1}
+#intro{position:fixed;inset:0;z-index:99;background:#07050e;display:grid;place-items:center;text-align:center;transition:opacity .7s,visibility .7s}
+#intro.hide{opacity:0;visibility:hidden}
+#intro h1{font-size:clamp(44px,13vw,110px);margin:0;font-weight:900;letter-spacing:4px;position:relative;color:#fff;animation:gl 1.2s infinite}
+#intro h1:before,#intro h1:after{content:attr(data-t);position:absolute;left:0;right:0}
+#intro h1:before{color:var(--pk);transform:translate(3px,0);mix-blend-mode:screen;clip-path:inset(0 0 55% 0)}
+#intro h1:after{color:var(--bl);transform:translate(-3px,0);mix-blend-mode:screen;clip-path:inset(50% 0 0 0)}
+@keyframes gl{0%,90%,100%{transform:none}93%{transform:translateX(-4px) skewX(6deg)}96%{transform:translateX(4px)}}
+#intro p{color:var(--mut);letter-spacing:6px;font-size:13px;margin:10px 0 26px}
+.ld{width:min(260px,70vw);height:4px;background:var(--line);border-radius:4px;margin:0 auto;overflow:hidden}
+.ld span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--pk),var(--pu));animation:ld 1.5s forwards}
+@keyframes ld{to{width:100%}}
+.wrap{max-width:1050px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(7,5,14,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1px}
+.logo b{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--or),var(--pk));color:#1a0d00;font-size:14px}
+nav a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:14px;transition:.2s}
+nav a:hover{color:var(--or)}
+nav a.tg{background:#229ed9;color:#fff;padding:8px 14px;border-radius:10px;font-weight:700}
+.hero{padding:70px 0 30px;text-align:center}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:rgba(19,13,29,.8);font-size:13px;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gr);box-shadow:0 0 10px var(--gr);animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.35}}
+.hero h1{font-size:clamp(46px,11vw,104px);margin:18px 0 8px;line-height:1;font-weight:900;letter-spacing:-1px;background:linear-gradient(90deg,var(--or),var(--pk),var(--pu),var(--or));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite;filter:drop-shadow(0 0 28px rgba(255,61,154,.35))}
+@keyframes sh{to{background-position:300% 0}}
+.hero p{max-width:580px;margin:0 auto 26px;color:var(--mut);font-size:17px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px;transition:.25s;display:inline-flex;gap:8px;align-items:center}
+.b1{background:linear-gradient(135deg,var(--or),#ff7a1f);color:#1a0d00;box-shadow:0 8px 30px rgba(255,140,30,.35)}
+.b2{border:1px solid var(--line);color:var(--tx);background:rgba(19,13,29,.8)}
+.b3{background:#229ed9;color:#fff;box-shadow:0 8px 30px rgba(34,158,217,.35)}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:34px 0 0}
+.st{background:rgba(19,13,29,.85);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.3s}
+.st:hover{border-color:var(--or);transform:translateY(-4px)}
+.st small{color:var(--mut);font-size:13px}
+.st div{font-size:34px;font-weight:800;margin-top:2px}
+.st:nth-child(1) div{color:var(--or)}.st:nth-child(2) div{color:var(--gr)}.st:nth-child(3) div{color:var(--pk)}.st:nth-child(4) div{color:var(--bl)}
+section{padding:50px 0 6px}
+h2{font-size:30px;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 24px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.lead{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.tl{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:24px;text-align:center;transition:transform .15s;transform-style:preserve-3d}
+.tl .ic{font-size:44px}
+.tl h3{margin:8px 0 4px;font-size:22px}
+.tl .rl{display:inline-block;padding:3px 12px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.tl.L{grid-column:1/-1;border-color:rgba(255,177,31,.7);box-shadow:0 0 50px rgba(255,177,31,.15)}
+.tl.L:before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(255,177,31,.18),transparent 30%);animation:rt 6s linear infinite}
+.tl>*{position:relative}
+@keyframes rt{to{transform:rotate(360deg)}}
+.L .rl{background:linear-gradient(90deg,var(--or),#ff7a1f);color:#1a0d00}
+.O .rl{background:rgba(139,77,255,.25);color:#c4a5ff;border:1px solid rgba(139,77,255,.5)}
+.tl small{display:block;color:var(--mut);margin-top:8px}
+.podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pd{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:22px;transition:.3s}
+.pd:hover{transform:translateY(-5px);border-color:var(--pk)}
+.pd .n{position:absolute;right:14px;top:-6px;font-size:84px;font-weight:900;opacity:.08}
+.pd .medal{font-size:30px}.pd h3{margin:8px 0 2px;font-size:20px}.pd span{color:var(--or);font-weight:800;font-size:22px}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.search{flex:1;min-width:220px;position:relative}
+.search input{width:100%;padding:14px 16px 14px 46px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--tx);font-size:16px;outline:none;transition:.2s}
+.search input:focus{border-color:var(--or);box-shadow:0 0 0 4px rgba(255,177,31,.15)}
+.search i{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-style:normal;opacity:.6}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--mut);cursor:pointer;font-size:14px;font-weight:600;transition:.2s;font-family:inherit}
+.chip.on{background:var(--or);color:#1a0d00;border-color:var(--or)}
+.list{display:grid;gap:10px}
+.m{display:grid;grid-template-columns:44px 1fr auto auto;gap:14px;align-items:center;background:rgba(19,13,29,.9);border:1px solid var(--line);border-radius:14px;padding:12px 16px;transition:.2s;animation:in .4s both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.m:hover{border-color:var(--pu);transform:translateX(5px);box-shadow:0 0 24px rgba(139,77,255,.18)}
+.m.rL{border-color:rgba(255,177,31,.5)}.m.rO{border-color:rgba(139,77,255,.45)}
+.rk{width:38px;height:38px;border-radius:10px;background:var(--card2);display:grid;place-items:center;font-weight:800;color:var(--mut)}
+.nm{font-weight:700;font-size:16px;word-break:break-word}
+.nm em{font-style:normal;background:rgba(255,177,31,.3);color:var(--or);border-radius:4px;padding:0 2px}
+.meta{display:flex;gap:8px;align-items:center;margin-top:3px;font-size:13px;flex-wrap:wrap}
+.lv{padding:1px 8px;border-radius:6px;background:rgba(139,77,255,.2);color:#c4a5ff;font-weight:700;font-size:12px}
+.role{padding:1px 8px;border-radius:6px;font-weight:700;font-size:12px}
+.role.L{background:rgba(255,177,31,.2);color:var(--or)}.role.O{background:rgba(255,61,154,.18);color:#ff7ab8}
+.pts{text-align:right;min-width:78px}.pts b{font-size:20px;display:block}.pts small{color:var(--mut);font-size:11px}
+.bar{height:4px;background:var(--line);border-radius:4px;margin-top:5px;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--or),var(--pk));border-radius:4px}
+.stt{min-width:130px;text-align:right;font-size:13px;font-weight:700}
+.on1{color:var(--gr)}.on2{color:var(--bl)}.on3{color:var(--pk)}.off{color:var(--mut);font-weight:500}
+.empty{text-align:center;padding:50px 10px;color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:16px}
+.empty big{font-size:40px;display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.cd{background:rgba(19,13,29,.9);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.3s}
+.cd:hover{transform:translateY(-5px);border-color:var(--or)}
+.cd b{font-size:28px}.cd h3{margin:8px 0 4px}.cd p{margin:0;color:var(--mut);font-size:14px}
+.join{margin-top:22px;padding:34px 24px;border-radius:22px;text-align:center;background:linear-gradient(120deg,rgba(255,61,154,.22),rgba(139,77,255,.22));border:1px solid rgba(255,61,154,.45)}
+.join h3{margin:0 0 6px;font-size:26px}.join p{margin:0 0 18px;color:var(--mut)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:8;width:56px;height:56px;border-radius:50%;background:#229ed9;display:grid;place-items:center;text-decoration:none;font-size:26px;box-shadow:0 8px 30px rgba(34,158,217,.5);animation:fb 2.4s infinite}
+@keyframes fb{50%{transform:translateY(-6px)}}
+footer{margin-top:60px;border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:13px}
+footer a{color:var(--bl)}
+@media(max-width:640px){nav a:not(.tg){display:none}.m{grid-template-columns:36px 1fr auto;padding:12px}.stt{grid-column:2/4;text-align:left;min-width:0}.hero{padding-top:44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.live{display:inline-flex;gap:10px;align-items:center;margin:16px 0 0;padding:8px 16px;border-radius:99px;background:rgba(46,229,157,.1);border:1px solid rgba(46,229,157,.4);font-size:13px;color:var(--gr);font-weight:700;letter-spacing:.5px}
+.live b{display:inline-block;min-width:22px;text-align:center;color:#fff}
+.live.off{background:rgba(154,143,176,.1);border-color:var(--line);color:var(--mut)}
+.m:has(.on1),.m:has(.on2),.m:has(.on3){background:linear-gradient(90deg,rgba(46,229,157,.09),rgba(19,13,29,.9) 40%)}
+.stt.on1,.stt.on2,.stt.on3{text-shadow:0 0 14px currentColor}
+.stt.pulse{animation:pl .8s}
+@keyframes pl{from{transform:scale(1.25);filter:brightness(2)}}
+.adm{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:8;padding:12px 18px;border-radius:14px;border:1px solid var(--or);background:rgba(19,13,29,.95);color:var(--or);font-weight:800;cursor:pointer;font-family:inherit;display:none}
+#ap{position:fixed;inset:0;z-index:50;background:rgba(7,5,14,.88);backdrop-filter:blur(8px);display:none;padding:calc(20px + env(safe-area-inset-top,0px)) 14px 20px;overflow:auto}
+#ap.open{display:block}
+#ap .box{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+#ap h3{margin:0 0 4px;font-size:22px}
+.ar{display:grid;grid-template-columns:1fr 120px 1fr 80px;gap:8px;align-items:center;margin-top:8px}
+.ar span{font-weight:700;font-size:14px;word-break:break-word}
+.ar select,.ar input{width:100%;padding:9px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--tx);font-family:inherit;font-size:14px}
+.ab{display:flex;gap:10px;margin-top:18px}
+@media(max-width:640px){.ar{grid-template-columns:1fr 1fr}.ar span{grid-column:1/3}}
+</style>
+</head>
+<body>
+<div id="intro"><div><h1 data-t="911 PORSCHE">911 PORSCHE</h1><p>ГИЛЬДИЯ · FREE FIRE</p><div class="ld"><span></span></div></div></div>
+<canvas id="fx"></canvas><div class="glow" id="gl"></div>
+
+<div class="z">
+<nav><div class="wrap"><div class="logo"><b>911</b>PORSCHE</div><div><a href="#top">Главная</a><a href="#team">Руководство</a><a href="#members">Участники</a><a href="#about">О гильдии</a><a class="tg" href="https://t.me/alimbatyr_a" target="_blank" rel="noopener">✈ Telegram</a></div></div></nav>
+
+<header class="hero wrap" id="top">
+<span class="badge"><span class="dot"></span><span id="onl">0</span> участников сейчас онлайн</span><br><div class="live off" id="live"><span class="dot"></span><span id="lt">Подключение к статусам…</span></div>
+<h1>911 PORSCHE</h1>
+<p>Боевая гильдия Free Fire. Играем сильно, дружно и на результат. Идёт турнир гильдий — присоединяйся к победителям!</p>
+<div class="btns"><a class="btn b3" href="https://t.me/alimbatyr_a" target="_blank" rel="noopener">✈ Написать в Telegram</a><a class="btn b1" href="#members">Найти игрока</a><a class="btn b2" href="#team">Руководство</a></div>
+<div class="stats">
+<div class="st"><small>Участников</small><div><span data-c="20">0</span>/25</div></div>
+<div class="st"><small>Сейчас онлайн</small><div id="s2" data-c="0">0</div></div>
+<div class="st"><small>Очков за неделю</small><div id="s3" data-c="0">0</div></div>
+<div class="st"><small>Уровень гильдии</small><div data-c="1">0</div></div>
+</div>
+</header>
+
+<main class="wrap">
+<section id="team" class="rv"><h2>👑 Руководство</h2><p class="sub">Лидер и офицеры гильдии 911 porsche</p><div class="lead" id="lead"></div></section>
+<section id="rating" class="rv"><h2>🏆 Топ недели</h2><p class="sub">Лучшие по активности гильдии за эту неделю</p><div class="podium" id="pod"></div></section>
+<section id="members" class="rv"><h2>👥 Участники</h2><p class="sub">Введите ник в поиск — список обновляется мгновенно</p>
+<div class="tools"><div class="search"><i>🔍</i><input id="q" type="search" placeholder="Поиск по нику..." autocomplete="off"></div>
+<div class="chips"><button class="chip on" data-f="all">Все</button><button class="chip" data-f="on">Онлайн</button><button class="chip" data-f="off">Не в сети</button><button class="chip" data-f="staff">Руководство</button></div></div>
+<div class="list" id="list"></div></section>
+<section id="about" class="rv"><h2>ℹ️ О гильдии</h2><p class="sub">Почему стоит быть с нами</p>
+<div class="cards">
+<div class="cd"><b>⚔️</b><h3>Турнир гильдий</h3><p>Мы участвуем в войне гильдий и боремся за призовые места.</p></div>
+<div class="cd"><b>🎁</b><h3>Награды за активность</h3><p>Чем больше очков за неделю, тем круче награды для каждого игрока.</p></div>
+<div class="cd"><b>🤝</b><h3>Дружная команда</h3><p>Играем вместе, помогаем новичкам и растём как одна семья.</p></div></div>
+<div class="join"><h3>🔥 Хочешь в гильдию?</h3><p>Идёт война гильдий, свободно 5 мест. Напиши нам в Telegram.</p><a class="btn b3" href="https://t.me/alimbatyr_a" target="_blank" rel="noopener">✈ @alimbatyr_a</a></div>
+</section>
+</main>
+<footer>© 2026 Гильдия 911 porsche · Free Fire · Telegram: <a href="https://t.me/alimbatyr_a" target="_blank" rel="noopener">@alimbatyr_a</a></footer>
+</div>
+<a class="fab" href="https://t.me/alimbatyr_a" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+
+<script>
+const D=[
+["Kaz____©",null,168,"on1","Онлайн",1,""],
+["KR DHEP",null,138,"on2","В команде",1,""],
+["911 sn1ks",70,778,"on3","Ультиматум · 5 мин.",1,"O"],
+["rinat",null,534,"off","8 ч. назад",0,"L"],
+["911 aisha",68,682,"off","15 мин. назад",0,"O"],
+["AKOSH",null,1274,"off","2 ч. назад",0,"O"],
+["Nurshik",null,810,"off","56 мин. назад",0,""],
+["kurd1sh",62,0,"off","7 ч. назад",0,""],
+["Римуру",64,0,"off","46 мин. назад",0,""],
+["aery 67",70,0,"off","8 ч. назад",0,""],
+["ADELYA",67,681,"off","3 ч. назад",0,""],
+["MN SHAL?",null,0,"off","21 ч. назад",0,""],
+["911 zhansaya",56,0,"off","19 ч. назад",0,""],
+["kaus1qq",69,0,"off","8 ч. назад",0,""],
+["nurs0",67,950,"off","3 ч. назад",0,""],
+["KARIEV",null,144,"off","1 ч. назад",0,""],
+["kaito",null,1034,"off","13 мин. назад",0,""],
+["911 daya",56,184,"off","7 ч. назад",0,""],
+["91100bugatti",null,308,"off","2 ч. назад",0,""],
+["xaxaxaxa017",null,558,"off","4 ч. назад",0,""]
+].map((a,i)=>({id:"u"+i,n:a[0],lv:a[1],p:a[2],c:a[3],s:a[4],on:a[5],role:a[6]}));
+D.sort((a,b)=>b.p-a.p);D.forEach((d,i)=>d.r=i+1);
+let max=Math.max(...D.map(d=>d.p)),$=id=>document.getElementById(id);
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=n=>n.toLocaleString("ru-RU");
+const onl=D.filter(d=>d.on).length,tot=D.reduce((a,d)=>a+d.p,0);
+$("onl").textContent=onl;$("s2").dataset.c=onl;$("s3").dataset.c=tot;
+const RN={L:"Лидер",O:"Офицер"};
+const staff=[...D.filter(d=>d.role==="L"),...D.filter(d=>d.role==="O")];
+$("lead").innerHTML=staff.map(d=>`<div class="tl ${d.role}"><div class="ic">${d.role==="L"?"👑":"🛡️"}</div><h3>${esc(d.n)}</h3><span class="rl">${RN[d.role]}</span><small>${fmt(d.p)} очков за неделю${d.lv?" · Ур."+d.lv:""}</small></div>`).join("");
+$("pod").innerHTML=D.slice(0,3).map((d,i)=>`<div class="pd"><div class="n">${i+1}</div><div class="medal">${["🥇","🥈","🥉"][i]}</div><h3>${esc(d.n)}</h3><span>${fmt(d.p)}</span> <small style="color:var(--mut)">очков</small></div>`).join("");
+let f="all";
+function render(){
+const q=$("q").value.trim().toLowerCase();
+const r=D.filter(d=>(!q||d.n.toLowerCase().includes(q))&&(f==="all"||(f==="on"?d.on:f==="off"?!d.on:!!d.role)));
+if(!r.length){$("list").innerHTML=`<div class="empty"><big>😕</big>Игрок «${esc($("q").value)}» не найден<br><small>Проверьте написание ника</small></div>`;return}
+$("list").innerHTML=r.map((d,i)=>{
+let name=esc(d.n);
+if(q){const k=d.n.toLowerCase().indexOf(q);name=esc(d.n.slice(0,k))+"<em>"+esc(d.n.slice(k,k+q.length))+"</em>"+esc(d.n.slice(k+q.length))}
+return `<div class="m ${d.role?"r"+d.role:""}" style="animation-delay:${Math.min(i,10)*30}ms"><div class="rk">${d.r}</div>
+<div><div class="nm">${d.role==="L"?"👑 ":d.role==="O"?"🛡️ ":""}${name}</div><div class="meta">${d.lv?`<span class="lv">Ур.${d.lv}</span>`:""}${d.role?`<span class="role ${d.role}">${RN[d.role]}</span>`:""}</div></div>
+<div class="pts"><b>${fmt(d.p)}</b><small>за неделю</small><div class="bar"><span style="width:${d.p/max*100}%"></span></div></div>
+<div class="stt ${d.c}">${d.on?"● ":""}${d.s}</div></div>`}).join("");
+}
+$("q").addEventListener("input",render);
+document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));b.classList.add("on");f=b.dataset.f;render()});
+render();
+/* intro */
+setTimeout(()=>{$("intro").classList.add("hide");count()},1700);
+/* counters */
+function count(){document.querySelectorAll("[data-c]").forEach(el=>{const t=+el.dataset.c,s=performance.now();(function st(n){const k=Math.min((n-s)/1400,1),e=1-Math.pow(1-k,3);el.textContent=fmt(Math.round(t*e));if(k<1)requestAnimationFrame(st)})(s)})}
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+/* 3D tilt */
+document.querySelectorAll(".tl").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.03)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
+/* cursor glow */
+addEventListener("pointermove",e=>{const g=$("gl");g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"});
+/* particles */
+const cv=$("fx"),cx=cv.getContext("2d");let W,H,P=[];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+const cols=["255,177,31","255,61,154","139,77,255"];
+for(let i=0;i<70;i++)P.push({x:Math.random()*1e4%innerWidth,y:Math.random()*1e4%innerHeight,v:.3+Math.random()*1.2,s:1+Math.random()*2,c:cols[i%3]});
+(function a(){cx.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}cx.fillStyle=`rgba(${p.c},.55)`;cx.shadowColor=`rgb(${p.c})`;cx.shadowBlur=10;cx.beginPath();cx.arc(p.x,p.y,p.s,0,7);cx.fill()});requestAnimationFrame(a)})();
+
+/* LIVE sync: status.json обновляется каждые 30 сек */
+const ST={on:["on1","Онлайн",1],team:["on2","В команде",1],game:["on3","В игре",1],off:["off","Не в сети",0]};
+const BASE=D.map(d=>({n:d.n,c:d.c,s:d.s,on:d.on,p:d.p}));
+function paint(){
+ D.sort((a,b)=>b.p-a.p);D.forEach((d,i)=>d.r=i+1);max=Math.max(1,...D.map(d=>d.p));
+ const o=D.filter(d=>d.on).length,t=D.reduce((a,d)=>a+d.p,0);
+ $("onl").textContent=o;$("s2").textContent=o;$("s3").textContent=fmt(t);
+ const st=[...D.filter(d=>d.role==="L"),...D.filter(d=>d.role==="O")];
+ $("lead").innerHTML=st.map(d=>`<div class="tl ${d.role}"><div class="ic">${d.role==="L"?"👑":"🛡️"}</div><h3>${esc(d.n)}</h3><span class="rl">${RN[d.role]}</span><small>${fmt(d.p)} очков за неделю${d.lv?" · Ур."+d.lv:""}</small></div>`).join("");
+ document.querySelectorAll(".tl").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.03)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
+ $("pod").innerHTML=D.slice(0,3).map((d,i)=>`<div class="pd"><div class="n">${i+1}</div><div class="medal">${["🥇","🥈","🥉"][i]}</div><h3>${esc(d.n)}</h3><span>${fmt(d.p)}</span> <small style="color:var(--mut)">очков</small></div>`).join("");
+ render();
+}
+function apply(m){D.forEach(d=>{const b=BASE.find(x=>x.n===d.n),v=m[d.n];
+ if(v&&ST[v.status]){const k=ST[v.status];d.c=k[0];d.on=k[2];d.s=v.note||k[1];if(typeof v.points==="number")d.p=v.points}
+ else{d.c=b.c;d.s=b.s;d.on=b.on;d.p=b.p}});paint()}
+let left=30;
+async function pull(){try{const r=await fetch("status.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;apply(await r.json());
+ $("live").classList.remove("off");$("lt").innerHTML='LIVE · обновление через <b id="cd">'+left+'</b> с'}catch(e){}}
+pull();
+setInterval(()=>{left--;if(left<=0){left=30;pull()}const c=$("cd");if(c)c.textContent=left},1000);
+</script>
+</body>
+</html>
